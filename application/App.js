@@ -8,7 +8,7 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <WebView
-        source={{ uri: 'https://blue-learn-mobile-hub.lovable.app' }}
+        source={{ uri: 'https://learnx-frontend-five.vercel.app/' }}
         style={{ flex: 1, width: '100%' }}
       />
     </View>
