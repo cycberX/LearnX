@@ -28,7 +28,7 @@ const UserProfile = () => {
         throw new Error("No token found");
       }
 
-      const response = await fetch("http://localhost:5000/api/user/profile", {
+      const response = await fetch("https://learn-x-swart.vercel.app/api/user/profile", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

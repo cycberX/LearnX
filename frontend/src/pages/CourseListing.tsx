@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { toast } from "@/components/ui/use-toast";
 import { useAuth } from "../context/AuthContext";
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://learn-x-swart.vercel.app/api";
 
 const CourseListing = () => {
   const { user } = useAuth();

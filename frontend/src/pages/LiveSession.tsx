@@ -10,7 +10,7 @@ import { Video, AlertCircle, UserPlus } from "lucide-react";
 import io, { Socket } from "socket.io-client";
 
 // Configuration
-const API_URL =  "http://localhost:5000"
+const API_URL =  "https://learn-x-swart.vercel.app/"
 
 const LiveSession = () => {
   const { sessionId } = useParams()

@@ -22,7 +22,7 @@ interface AuthContextType {
 }
 
 const AUTH_STORAGE_KEY = "eduApp_user";
-const API_BASE_URL = "http://localhost:5000/api"; // Replace with your API's base URL
+const API_BASE_URL = "https://learn-x-swart.vercel.app/api"; // Replace with your API's base URL
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
