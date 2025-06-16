@@ -121,6 +121,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       const response = await fetch(`${API_BASE_URL}/auth/signup`, {
   method: "POST",
+  credentials: 'include',
   headers: {
     "Content-Type": "application/json",
   },
