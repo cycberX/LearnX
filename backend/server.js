@@ -8,6 +8,7 @@ import cookieParser from "cookie-parser"
 import helmet from "helmet"
 import morgan from "morgan"
 import path from "path"
+import serverless from "serverless-http"
 
 // Import routes
 import authRoutes from "./routes/auth.js"
@@ -41,12 +42,11 @@ const io = new Server(server, {
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
-app.use(
-  cors({
-    origin: "*",
-    credentials: true,
-  }),
-)
+app.use(cors({
+  origin: '*', // or explicitly set your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 app.use(helmet())
 app.use(morgan("dev"))
 
@@ -290,5 +290,5 @@ server.listen(PORT, () => {
   console.log(`API Documentation: http://localhost:${PORT}/api-docs`)
   console.log(`Admin Panel: http://localhost:${PORT}/admin`)
 })
-
+export const handler = serverless(app)
 export default server
