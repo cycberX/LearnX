@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "LearnX",
-    "slug": "LearnX",
+    "slug": "learnx",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,13 +9,15 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cycberx.learnx"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.cycberx.learnx"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +38,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "029be773-8dc6-467f-801c-dc975c84b407"
+      }
+    },
+    "owner": "cycberx"
   }
 }
